@@ -7,12 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystal Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
 
@@ -20,19 +23,19 @@
 
     <div class="jumbotron">
         <h1 class="display-3">Crystal Collector</h1>
-        <p class="lead">This is a simple game. Collect the crystals by clicking the buttons below. You score points with each click. Match
+        <p class="lead">This is a simple game. Collect the crystals by clicking the buttons below. An increment of crystals is revealed upon click, points are scored with each one. Match
             the computer's number to win. Score higher, you lose.
             <br>Don't lose and have fun!</p>
         <hr class="my-4">
-        <p>Use the button to start a match</p>
+        <p>Use this button to begin</p>
         <p class="lead">
             <a class="btn btn-danger btn-lg" id='initialize' href="#" role="button">Start Collecting</a>
         </p>
     </div>
 
-    <div class="container">
+    <div class="container myCard">
         <div class="row">
-            <div class="col-sm">
+            <div class="col-sm-6 myCard">
                 <div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
                     <div class="card-header">Computer Score</div>
                     <div class="card-body">
@@ -41,7 +44,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm">
+            <div class="col-sm-6 myCard">
                 <div class="card border-danger mb-3" style="max-width: 20rem;">
                     <div class="card-header">User Score</div>
                     <div class="card-body">
@@ -57,10 +60,14 @@
         <div class="row-fluid">
 
             <div class="text-center">
-                <button id="crystalButton1" type="button" style="padding: 15px; font-size: 20px;" class="btn btn-danger crystalButtons">Ruby</button>
-                <button id="crystalButton2" type="button" style="padding: 15px; font-size: 20px;" class="btn btn-success crystalButtons">Emerald</button>
-                <button id="crystalButton3" type="button" style="padding: 15px; font-size: 20px;" class="btn btn-info crystalButtons">Sapphire</button>
-                <button id="crystalButton4" type="button" style="padding: 15px; font-size: 20px;" class="btn btn-warning crystalButtons">Citrine</button>
+                <button id="crystalButton1" type="button" style="padding: 15px; font-size: 20px;" class="btn btn-danger crystalButtons">Ruby
+                    <br> </button>
+                <button id="crystalButton2" type="button" style="padding: 15px; font-size: 20px;" class="btn btn-success crystalButtons">Emerald
+                    <br> </button>
+                <button id="crystalButton3" type="button" style="padding: 15px; font-size: 20px;" class="btn btn-info crystalButtons">Sapphire
+                    <br> </button>
+                <button id="crystalButton4" type="button" style="padding: 15px; font-size: 20px;" class="btn btn-warning crystalButtons">Citrine
+                    <br> </button>
             </div>
 
         </div>
@@ -76,17 +83,6 @@
             <span class="badge badge-primary badge-pill loseScore">0</span>
         </li>
     </ul>
-
-    <style>
-        .loseScore {
-            background-color: #ff4444;
-            width: 50px;
-        }
-        .winScore {
-            background-color: #00C851;
-            width: 50px;
-        }
-    </style>
 
 </body>
 
